@@ -21,18 +21,18 @@ Desarrollar un sistema de ventas eficiente y escalable, que implemente buenas pr
 
 **Objetivos Específicos**
 
-Implementar una arquitectura modular basada en patrones de diseño como MVC, Repositorio y Factory para una mejor organización del código.
+- Implementar una arquitectura modular basada en patrones de diseño como MVC, Repositorio y Factory para una mejor organización del código.
 
-Aplicar principios SOLID para asegurar que cada componente tenga una única responsabilidad y el sistema sea flexible ante cambios futuros.
+- Aplicar principios SOLID para asegurar que cada componente tenga una única responsabilidad y el sistema sea flexible ante cambios futuros.
 
-Desarrollar interfaces claras y reutilizables que faciliten la integración de nuevas funcionalidades sin afectar las existentes.
+- Desarrollar interfaces claras y reutilizables que faciliten la integración de nuevas funcionalidades sin afectar las existentes.
 
-Garantizar la separación adecuada entre la lógica de negocio, presentación y acceso a datos para mejorar la mantenibilidad.
+- Garantizar la separación adecuada entre la lógica de negocio, presentación y acceso a datos para mejorar la mantenibilidad.
 
-Implementar pruebas unitarias y de integración para validar el correcto funcionamiento del sistema y prevenir regresiones.
+- Implementar pruebas unitarias y de integración para validar el correcto funcionamiento del sistema y prevenir regresiones.
 
-Optimizar el rendimiento del sistema para manejar transacciones de ventas de manera ágil y segura.
+- Optimizar el rendimiento del sistema para manejar transacciones de ventas de manera ágil y segura.
 
-Documentar el código y las decisiones de diseño para facilitar la comprensión y el mantenimiento por parte del equipo de desarrollo.
+- Documentar el código y las decisiones de diseño para facilitar la comprensión y el mantenimiento por parte del equipo de desarrollo.
 
 

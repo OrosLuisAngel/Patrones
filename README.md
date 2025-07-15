@@ -1,7 +1,7 @@
 # Sistema de Ventas
-Profesor:
+ Profesor:
 - Alonso Ledesma Edwin Jesus
-Participantes:
+ Participantes:
 - Luis Angel Oros Sicha
   
 Proyect

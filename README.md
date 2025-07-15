@@ -35,4 +35,24 @@ Desarrollar un sistema de ventas eficiente y escalable, que implemente buenas pr
 
 - Documentar el código y las decisiones de diseño para facilitar la comprensión y el mantenimiento por parte del equipo de desarrollo.
 
+**Alcances**
+
+- Gestión de Productos: El sistema permitirá el registro, actualización y eliminación de productos con sus características principales (nombre, descripción, precio, stock, etc.).
+
+- Registro de Clientes: Se podrá almacenar y administrar la información básica de los clientes para facilitar las ventas y el seguimiento.
+
+- Procesamiento de Ventas: El sistema gestionará la creación, edición y cancelación de ventas, registrando los productos vendidos, cantidades, precios y el cliente asociado.
+
+- Control de Inventario: Se actualizará automáticamente el inventario tras cada venta, alertando sobre niveles bajos de stock.
+
+- Reportes Básicos: Generación de reportes de ventas diarias, productos más vendidos y estados de inventario para apoyar la toma de decisiones.
+
+- Autenticación y Seguridad: Implementación de un sistema básico de autenticación para proteger el acceso a la aplicación.
+
+- Arquitectura basada en Patrones: Aplicación de patrones de diseño para mantener un código organizado, escalable y fácil de mantener.
+
+- Pruebas y Documentación: Desarrollo de pruebas unitarias y documentación técnica para asegurar la calidad y facilitar el mantenimiento.
+
+- Interfaz amigable: Diseño de una interfaz de usuario intuitiva y responsive para facilitar la experiencia del usuario.
+
 

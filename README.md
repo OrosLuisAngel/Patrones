@@ -7,52 +7,52 @@
 - Luis Angel Oros Sicha
 - Sandro Piero Salazar Camacho
 
-**Introducción**
+### Introducción
 
- El desarrollo de sistemas de ventas modernos requiere no solo funcionalidad y eficiencia, sino también un diseño robusto y mantenible. Para alcanzar estos objetivos, este sistema de ventas ha sido diseñado siguiendo buenas prácticas de ingeniería de software y aplicando patrones de diseño probados. Estas prácticas aseguran que el código sea modular, escalable y fácil de mantener, facilitando futuras extensiones y adaptaciones.
+ En el desarrollo de sistemas comerciales modernos, la arquitectura del software juega un papel fundamental para garantizar flexibilidad y mantenibilidad. Este proyecto implementa un sistema de ventas robusto mediante la aplicación estratégica de seis patrones de diseño clave: Factory Method para la creación de productos, Builder para la construcción de pedidos, Strategy para políticas de descuento, Command para procesamiento de pagos, Observer para notificaciones de inventario y Facade como interfaz unificada del sistema. Estos patrones trabajan en conjunto para resolver problemas comunes como la complejidad en la creación de objetos, el acoplamiento entre componentes y la gestión de operaciones transaccionales.
 
-El uso de patrones de diseño como el Modelo-Vista-Controlador (MVC) para separar la lógica de presentación, negocio y datos, el patrón Repositorio para abstraer el acceso a datos, y el patrón Factory para la creación de objetos, entre otros, contribuyen a un desarrollo más organizado y eficiente. Además, la adherencia a principios SOLID garantiza que cada componente tenga una única responsabilidad y que el sistema sea flexible ante cambios.
+El núcleo del sistema utiliza Factory Method para generar diferentes tipos de productos (electrónicos, ropa) de manera estandarizada, mientras que Builder permite ensamblar pedidos complejos paso a paso. Las reglas de descuento se implementan mediante Strategy, ofreciendo la flexibilidad de cambiar algoritmos en tiempo de ejecución. Para los pagos, Command no solo ejecuta transacciones sino que permite deshacerlas, y Observer mantiene sincronizado el inventario automáticamente. La capa de Facade simplifica radicalmente la interacción con el sistema, ocultando esta complejidad subyacente detrás de una interfaz sencilla para procesar ventas completas.
 
-Este enfoque no solo mejora la calidad del software, sino que también facilita el trabajo colaborativo y reduce los riesgos asociados a la evolución del sistema, permitiendo entregar soluciones de ventas confiables y adaptadas a las necesidades del negocio.
+Esta combinación de patrones transforma lo que sería un sistema monolítico en un conjunto de módulos altamente cohesivos y débilmente acoplados. Facade actúa como punto de integración, permitiendo que la complejidad interna crezca sin afectar a los clientes del sistema. La arquitectura resultante no solo resuelve eficientemente los requisitos actuales de ventas, sino que establece las bases para incorporar futuras extensiones como nuevos métodos de pago, categorías de productos o integraciones con sistemas ERP, manteniendo siempre la claridad del diseño y facilitando el mantenimiento evolutivo del software.
 
-**Objetivo General**
+### Objetivo General
 
-Desarrollar un sistema de ventas eficiente y escalable, que implemente buenas prácticas de programación y patrones de diseño, con el fin de garantizar la calidad, mantenibilidad y facilidad de evolución del software.
+Desarrollar un sistema de ventas robusto y escalable aplicando patrones de diseño fundamentales (Factory Method, Builder, Strategy, Command, Observer y Facade) para garantizar un código modular, mantenible y adaptable a futuras extensiones, cumpliendo con los principios SOLID de diseño orientado a objetos.
 
-**Objetivos Específicos**
+### Objetivos Específicos
 
-- Implementar una arquitectura modular basada en patrones de diseño como MVC, Repositorio y Factory para una mejor organización del código.
+1. Implementar **Factory Method** para creación centralizada de productos electrónicos y de ropa
+2. Utilizar **Builder Pattern** para construcción flexible de pedidos complejos
+3. Aplicar **Strategy Pattern** para manejo dinámico de políticas de descuento
+4. Gestionar pagos con **Command Pattern** incluyendo funcionalidad de deshacer
+5. Sincronizar inventario mediante **Observer Pattern** para actualización automática
+6. Simplificar la API del sistema usando **Facade Pattern**
+7. Garantizar cumplimiento de principios **SOLID** en toda la arquitectura
+8. Diseñar para escalabilidad futura con módulos independientes y extensibles
 
-- Aplicar principios SOLID para asegurar que cada componente tenga una única responsabilidad y el sistema sea flexible ante cambios futuros.
+### Alcances del Sistema
 
-- Desarrollar interfaces claras y reutilizables que faciliten la integración de nuevas funcionalidades sin afectar las existentes.
+**Funcionalidades principales:**
 
-- Garantizar la separación adecuada entre la lógica de negocio, presentación y acceso a datos para mejorar la mantenibilidad.
+- Creación de productos electrónicos y de ropa mediante **Factory Method**  
+- Construcción de pedidos con múltiples productos usando **Builder Pattern**  
+- Aplicación de descuentos porcentuales o fijos con **Strategy Pattern**  
+- Procesamiento de pagos (efectivo, tarjeta, PayPal) mediante **Command Pattern**  
+- Notificaciones automáticas al inventario con **Observer Pattern**  
+- Interfaz unificada para ventas mediante **Facade Pattern**  
 
-- Implementar pruebas unitarias y de integración para validar el correcto funcionamiento del sistema y prevenir regresiones.
+**Límites del sistema:**
 
-- Optimizar el rendimiento del sistema para manejar transacciones de ventas de manera ágil y segura.
+- No incluye persistencia en base de datos  
+- No maneja autenticación de usuarios  
+- No genera reportes analíticos  
+- No integra con sistemas externos (ERP, pasarelas de pago)  
 
-- Documentar el código y las decisiones de diseño para facilitar la comprensión y el mantenimiento por parte del equipo de desarrollo.
+**Entregables:**
 
-**Alcances**
+-  Código fuente implementando los 6 patrones de diseño
+-  Diagrama de clases UML del sistema
+-  Documentación técnica (este archivo README)  
 
-- Gestión de Productos: El sistema permitirá el registro, actualización y eliminación de productos con sus características principales (nombre, descripción, precio, stock, etc.).
-
-- Registro de Clientes: Se podrá almacenar y administrar la información básica de los clientes para facilitar las ventas y el seguimiento.
-
-- Procesamiento de Ventas: El sistema gestionará la creación, edición y cancelación de ventas, registrando los productos vendidos, cantidades, precios y el cliente asociado.
-
-- Control de Inventario: Se actualizará automáticamente el inventario tras cada venta, alertando sobre niveles bajos de stock.
-
-- Reportes Básicos: Generación de reportes de ventas diarias, productos más vendidos y estados de inventario para apoyar la toma de decisiones.
-
-- Autenticación y Seguridad: Implementación de un sistema básico de autenticación para proteger el acceso a la aplicación.
-
-- Arquitectura basada en Patrones: Aplicación de patrones de diseño para mantener un código organizado, escalable y fácil de mantener.
-
-- Pruebas y Documentación: Desarrollo de pruebas unitarias y documentación técnica para asegurar la calidad y facilitar el mantenimiento.
-
-- Interfaz amigable: Diseño de una interfaz de usuario intuitiva y responsive para facilitar la experiencia del usuario.
 
 

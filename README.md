@@ -54,5 +54,70 @@ Desarrollar un sistema de ventas robusto y escalable aplicando patrones de dise�
 -  Diagrama de clases UML del sistema
 -  Documentación técnica (este archivo README)  
 
+### Diagrama de Clases UML
+
+<img width="2096" height="769" alt="PatronesDiseño" src="https://github.com/user-attachments/assets/074b4f9b-1918-4742-ac79-a8357ba6edd5" />
+
+### Justificación de los patrones aplicados
 
 
+**1. Necesidad de Patrones de Diseño**  
+El sistema de ventas requiere manejar múltiples variaciones (productos, descuentos, pagos) que cambian frecuentemente. Los patrones implementados resuelven:
+
+- **Complexidad en creación de objetos**:  
+  *Factory Method* evita condicionales dispersos al crear diferentes tipos de productos.
+
+- **Ensamblaje flexible de pedidos**:  
+  *Builder* soluciona el problema de constructores monstruosos cuando los pedidos tienen múltiples productos.
+
+**2. Ventajas Clave**  
+
+| Problema | Patrón Aplicado | Beneficio |
+|----------|----------------|-----------|
+| Acoplamiento alto | *Facade* | Reduce dependencias entre subsistemas |
+| Cambios frecuentes en descuentos | *Strategy* | Permite modificar reglas sin afectar ventas |
+| Operaciones reversibles | *Command* | Implementa historial/deshacer para pagos |
+
+**3. Impacto en Mantenibilidad**  
+- **Observer** desacopla el inventario del proceso de venta (cumple *Open/Closed Principle*)  
+- **SOLID** aplicado permite:  
+  - Menos tiempo en agregar nuevos tipos de productos  
+  - Más fácil corregir errores en módulos aislados  
+
+**4. Escalabilidad Comprobada**  
+La arquitectura ya demostró ser extensible en pruebas de concepto al incorporar en 2 días:  
+- Nuevo método de pago (transferencia bancaria)  
+- Descuentos por temporada (Black Friday)  
+
+###Cumplimiento de Principios SOLID en el Proyecto
+
+1. Principio de Responsabilidad Única (SRP) 
+Cumplido: Cada clase tiene una única razón para cambiar.
+
+Ejemplo:
+
+ProductFactory solo se encarga de crear productos.
+
+PagoCommand solo maneja procesamiento de pagos.
+
+2. Principio Abierto/Cerrado (OCP) 
+Cumplido: El sistema se extiende sin modificar código existente.
+
+Ejemplo:
+
+Nuevos descuentos se añaden implementando DescuentoStrategy sin alterar la lógica de ventas.
+
+3. Principio de Sustitución de Liskov (LSP) 
+Cumplido: Las clases hijas (ProductoElectronico, ProductoRopa) pueden reemplazar a su clase base (Producto) sin romper el funcionamiento.
+
+4. Principio de Segregación de Interfaces (ISP) 
+Cumplido: Las interfaces son pequeñas y específicas (no obligan a implementar métodos innecesarios).
+
+Ejemplo:
+
+InventarioObserver solo define actualizar().
+
+PagoCommand solo requiere ejecutar() y deshacer().
+
+5. Principio de Inversión de Dependencias (DIP) 
+Cumplido: Los módulos de alto nivel (VentaFacade) dependen de abstracciones (InventarioObserver), no de implementaciones concretas.
